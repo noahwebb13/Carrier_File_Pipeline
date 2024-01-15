@@ -1,0 +1,11 @@
+ClaimID,ParticipantSSN,ParticipantDOB,ParticipantFirstName,ParticipantLastName,PatientSSN,PatientDOB,PatientFirstName,PatientLastName,ClaimAmount,ClaimDescription,MedicalProvider,ProviderAddress,ProviderCity,ProviderState,ProviderCountry,ProviderZipCode,ServiceStartDate,ServiceEndDate
+119,987-65-4321,19721126,Abigail,Carter,543-21-0987,19881203,Jack,Carter,800.75,Consultation,LMN Healthcare,123 Pine St,Bluetown,OK,USA,89012,2024-02-05,2024-02-15
+120,543-21-0987,19921210,Samuel,Martin,234-56-7890,19780820,Lily,Martin,950.00,Lab Test,OPQ Hospital,456 Maple St,Redtown,SC,USA,45678,2024-02-10,2024-02-20
+121,234-56-7890,19800805,Ava,Cooper,876-54-3210,19830212,Christopher,Cooper,600.25,Lab Test,RST Clinic,789 Cedar St,Orangetown,AL,USA,12345,2024-02-15,2024-02-25
+122,876-54-3210,19930218,Liam,Richardson,567-89-0123,19870802,Avery,Richardson,1100.75,Surgery,ABC Medical Group,123 Main St,Blueville,CA,USA,23456,2024-02-20,2024-02-29
+123,567-89-0123,19910207,Hannah,Baker,876-54-3210,19740619,Ethan,Baker,700.50,XYZ Hospital,Lab Test,456 Oak St,Whitetown,NY,USA,56789,2024-02-25,2024-03-05
+124,876-54-3210,19850318,Logan,Roberts,567-89-0123,19930125,Harper,Roberts,950.25,Lab Test,ABC Medical Group,123 Main St,Blueville,CA,USA,23456,2024-02-01,2024-02-11
+125,567-89-0123,19910207,Hannah,Baker,210-98-7654,19740619,Ethan,Baker,700.50,Therapy,XYZ Hospital,456 Oak St,Whitetown,NY,USA,56789,2024-02-06,2024-02-16
+126,210-98-7654,19831204,Natalie,Ward,123-45-6789,19920808,Lucas,Ward,1200.00,Lab Test,PQR Healthcare,789 Pine St,Blackville,TX,USA,87654,2024-02-11,2024-02-21
+127,123-45-6789,19790215,Caleb,Evans,109-87-6543,19851222,Sofia,Evans,550.75,Lab Test,LMN Clinic,890 Cedar St,Redtown,FL,USA,54321,2024-02-16,2024-02-26
+128,109-87-6543,19950403,Samantha,Collins,987-65-4321,19801110,Noah,Collins,900.50,Lab Test,OPQ Medical Center,234 Elm St,Orangetown,IL,USA,78901,2024-02-21,2024-03-02

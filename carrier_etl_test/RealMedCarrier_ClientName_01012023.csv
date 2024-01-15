@@ -1,0 +1,13 @@
+ClaimID,ParticipantSSN,ParticipantDOB,ParticipantFirstName,ParticipantLastName,PatientSSN,PatientDOB,PatientFirstName,PatientLastName,ClaimAmount,ClaimDescription,MedicalProvider,ProviderAddress,ProviderCity,ProviderState,ProviderCountry,ProviderZipCode,ServiceStartDate,ServiceEndDate
+100,123-45-6789,19900101,John,Doe,345-67-8901,19851215,Jane,Doe,500.00,Consultation,ABC Medical Center,123 Main St,Anytown,CA,USA,12345,2023-12-05,2023-12-15
+101,987-65-4321,19870228,Alice,Smith,210-98-7654,19790403,Bob,Smith,750.50,X-ray,XYZ Healthcare,456 Oak St,AnotherCity,NY,USA,56789,2023-12-10,2023-12-20
+102,345-67-8901,19801112,Michael,Johnson,543-21-0987,19920820,Susan,Johnson,1200.75,Surgery,PQR Hospital,789 Pine St,YetAnotherCity,TX,USA,98765,2023-12-15,2023-12-25
+103,234-56-7890,19780325,David,Williams,876-54-3210,19890415,Emily,Williams,950.25,Lab Test,LMN Clinic,567 Cedar St,Someville,FL,USA,54321,2023-12-20,2023-12-30
+104,876-54-3210,19950908,Sarah,Miller,109-87-6543,19760602,Chris,Miller,800.50,Physical Therapy,OPQ Medical Services,890 Birch St,Everytown,IL,USA,67890,2023-12-25,2024-01-04
+105,543-21-0987,19830417,Richard,Davis,678-90-1234,19911030,Michelle,Davis,600.75,Consultation,RST Healthcare,123 Pineapple Ln,Sunnydale,AZ,USA,45678,2023-12-30,2024-01-09
+106,678-90-1234,19920704,Matthew,Anderson,987-65-4321,19800812,Olivia,Anderson,1100.00,Surgery,UVW Hospital,456 Maple St,Greenwood,OH,USA,23456,2024-01-04,2024-01-14
+107,109-87-6543,19811203,Emma,Brown,210-98-7654,19750318,William,Brown,850.25,Lab Test,XYZ Medical Group,789 Oak St,Blueville,GA,USA,78901,2024-01-09,2024-01-19
+108,210-98-7654,19931220,Christopher,Smith,876-54-3210,19860909,Ava,Smith,700.50,X-ray,PQR Clinic,890 Elm St,Redville,MI,USA,34567,2024-01-14,2024-01-24
+109,876-54-3210,19901105,Lauren,Johnson,123-45-6789,19720427,Brian,Johnson,950.75,Physical Therapy,ABC Healthcare,123 Oak St,Yellowtown,WA,USA,89012,2024-01-19,2024-01-29
+110,123-45-6789,19900101,John,Doe,345-67-8901,19851215,Jane,Doe,500.00,Consultation,ABC Medical Center,123 Main St,Anytown,CA,USA,12345,2023-12-05,2023-12-15
+111,987-65-4321,19870228,Alice,Smith,210-98-7654,19790403,Bob,Smith,750.50,X-ray,XYZ Healthcare,456 Oak St,AnotherCity,NY,USA,56789,2023-12-10,2023-12-20

@@ -1,0 +1,5 @@
+"111724631","123456789","O'Furniture","Patty","L",19720606,"O'Furniture","Patty","L","Vision-R-Us",01102023,01102023,"1112223333",174.00,"Ms Eye Care USA","30 Johnson St","","Jackson","MS","55441","US",""
+"111724631","112233445","Chovey","Anne","",19760926,"Chovey","Brian","","Vision-R-Us",01192023,01192023,"5953432997",40.90,"EYEMART EXPRESS","39 MCFARLAND BLVD EAST","","JUNEUA","AK","99801","US",""
+"111724631","999999999","Nutt","Hazel","K",19701026,"Nutt","Wall","A","Vision-R-Us",01252023,01252023,"9579579574",33.50,"Eye Care Inc","395 Hargrove Rd E","","Birmingham","AL","35944","US",""
+"111724631","900000000","Mellow","Marsha","",19820411,"Mellow","Mister","S","Vision-R-Us",01122023,01122023,"3453453456",2.00,"Wesley Eye House","6 Kevin Blvd","","Good Purple Township","MO","64444","US",""
+"111724631","900000001","Yew","Olive","",00010101,"Yew","Ivanna","S","Vision-R-Us",01052023,01052023,"49816543531",3.00,"Wal Mart Vision","12th E Blvd","","Northport","IL","55544","US",""

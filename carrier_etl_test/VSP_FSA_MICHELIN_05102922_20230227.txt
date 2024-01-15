@@ -1,0 +1,5 @@
+"111724631","123456789","Feest","Laverne","K",19720606,"Feest","Laverne","A","Vision-R-Us",02102023,02102023,"1112223333",456.00,"MR EYE MANFIELD","30 XAVIER RD","","BRAXTON","MS","64551","US",""
+"111724631","112233445","Kutch","Tristan","",19760926,"Kutch","Kevin","","Vision-R-Us",02122023,02122023,"5953432997",50.10,"EYE EXPOSITION","808 MAFIA BLVD EAST","","JEFFERSMITH","CA","64813","US",""
+"111724631","999999999","Brakus","Marty","D",19701026,"Brakus II","Marty","G","Vision-R-Us",02152023,02152023,"9579579574",39.20,"Eye Care Inc","1654 HAROLDPORT E","","VERMONT","MI","16458","US",""
+"111724631","900000000","Hudson","Haley","M",19820411,"Hudson","Marie","F","Vision-R-Us",02152023,02152023,"3453453456",5.00,"Gerald's Eye Hut","6 JASON Blvd","","ST JOSEPHTOWN","MO","644881","US",""
+"111724631","900000001","Murphy","Godfrey","",00010101,"Murphy","Miss Lady","E","Vision-R-Us",02202023,02202023,"49816543531",20.00,"Fancy Vision Inc","10 Lordway Blvd","","Huntington","MA","31548","US",""

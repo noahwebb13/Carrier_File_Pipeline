@@ -1,0 +1,13 @@
+ClaimID,ParticipantSSN,ParticipantDOB,ParticipantFirstName,ParticipantLastName,PatientSSN,PatientDOB,PatientFirstName,PatientLastName,ClaimAmount,ClaimDescription,MedicalProvider,ProviderAddress,ProviderCity,ProviderState,ProviderCountry,ProviderZipCode,ServiceStartDate,ServiceEndDate
+112,567-89-0123,19890614,Andrew,White,876-54-3210,19711208,Laura,White,700.00,Consultation,LMN Medical Center,234 Birch St,Orangetown,NJ,USA,98765,2024-01-01,2024-01-11
+113,890-12-3456,19840422,Grace,Miller,123-45-6789,19960110,Charles,Miller,850.50,X-ray,OPQ Healthcare,345 Cedar St,Purpletown,PA,USA,23456,2024-01-06,2024-01-16
+114,123-45-6789,19760701,Justin,Taylor,876-54-3210,19900918,Chloe,Taylor,1200.25,Surgery,RST Hospital,456 Oak St,Brownsville,TN,USA,87654,2024-01-11,2024-01-21
+115,876-54-3210,19820219,Victoria,Clark,345-67-8901,19830707,James,Clark,550.50,Lab Test,UVW Medical Group,567 Maple St,Whiteland,LA,USA,34567,2024-01-16,2024-01-26
+116,345-67-8901,19940127,Nathan,Moore,210-98-7654,19801004,Sophia,Moore,900.75,Physical Therapy,ABC Clinic,678 Pine St,Blackville,VA,USA,65432,2024-01-21,2024-01-31
+117,210-98-7654,19871008,Olivia,Hall,109-87-6543,19911215,Mason,Hall,650.00,Consultation,XYZ Hospital,789 Elm St,Yellowville,KY,USA,54321,2024-01-26,2024-02-05
+118,109-87-6543,19900531,Daniel,Adams,987-65-4321,19750414,Grace,Adams,1100.50,X-ray,PQR Medical Services,890 Oak St,Greenfield,NC,USA,78901,2024-01-31,2024-02-10
+119,987-65-4321,19721126,Abigail,Carter,543-21-0987,19881203,Jack,Carter,800.75,Surgery,LMN Healthcare,123 Pine St,Bluetown,OK,USA,89012,2024-02-05,2024-02-15
+120,543-21-0987,19921210,Samuel,Martin,234-56-7890,19780820,Lily,Martin,950.00,Lab Test,OPQ Hospital,456 Maple St,Redtown,SC,USA,45678,2024-02-10,2024-02-20
+121,234-56-7890,19800805,Ava,Cooper,876-54-3210,19830212,Christopher,Cooper,600.25,Lab Test,RST Clinic,789 Cedar St,Orangetown,AL,USA,12345,2024-02-15,2024-02-25
+122,876-54-3210,19930218,Liam,Richardson,567-89-0123,19870802,Avery,Richardson,1100.75,Lab Test,ABC Medical Group,123 Main St,Blueville,CA,USA,23456,2024-02-20,2024-02-29
+123,567-89-0123,19910207,Hannah,Baker,876-54-3210,19740619,Ethan,Baker,700.50,Lab Test,XYZ Hospital,456 Oak St,Whitetown,NY,USA,56789,2024-02-25,2024-03-05

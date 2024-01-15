@@ -1,0 +1,46 @@
+{
+    "Aetna":{
+        "file_input_path": "N:/OPTClaimsConversion/Incoming/OHFSIncoming/OHFSArchive/Tesla",
+        "file_name_pattern": "MedClaimsEXP_Aetna_Tesla_",
+        "date_start_regx": "MedClaimsEXP_Aetna_Tesla_",
+        "date_length": 8,
+        "date_format": "%Y%m%d"
+    },
+    "VSP":{
+        "file_input_path": "N:/OPTClaimsConversion/Incoming/OHFSIncoming/OHFSArchive/Tesla",
+        "file_name_pattern": "VSP_FSA_TESLA_30051220_",
+        "date_start_regx": "VSP_FSA_TESLA_30051220_",
+        "date_length": 8,
+        "date_format": "%Y%m%d"
+    },
+    "output":{
+        "employer_code": "T97729",
+        "mapped_output_path": "N:/OPTClaimsConversion/Incoming/OHFSIncoming/OHFSArchive/Tesla/carrier_combined/mapped",
+        "output_header": ["EMPLOYER_CODE","EMPLOYER_TAX_ID","PARTICIPANT_SSN","PARTICIPANT_LAST_NAME","PARTICIPANT_FIRST_NAME","PARTICIPANT_MIDDLE_INITIAL","PARTICIPANT_DATE_OF_BIRTH","PATIENT_LAST_NAME","PATIENT_FIRST_NAME","PATIENT_MIDDLE_INITIAL","CARRIER_SYSTEM","SERVICE_START_DATE","SERVICE_THRU_DATE","CLAIM_NUMBER","CLAIM_AMOUNT","PROVIDER_NAME","PROVIDER_ADDRESS1","PROVIDER_ADDRESS2","PROVIDER_CITY","PROVIDER_STATE","PROVIDER_ZIP","PROVIDER_COUNTRY","CLAIM_TYPE","FILE_NAME","EXPENSE_CATEGORY"],
+        "pivot_output_path": "'N:/OPTClaimsConversion/Incoming/OHFSIncoming/OHFSArchive/Tesla/carrier_combined/pivot/'",
+        "substantiate":{
+            "file_input_path": "N:/OPTClaimsConversion/Incoming/OHFSIncoming/OHFSArchive/Tesla/carrier_combined/substantiate_claims",
+            "date_format":"%Y-%m-%d",
+            "date_length": 10,
+            "unsub":{
+                "file_name_pattern": "TeslaUnsubstantiated_",
+                "date_start_regx": "TeslaUnsubstantiated_"
+            },
+            "auto":{
+                "file_name_pattern": "TeslaDBClaimsAmount_",
+                "date_start_regx": "TeslaDBClaimsAmount_"
+            }
+        }
+    },
+    "pivot":{
+        "file_input_path": "N:/OPTClaimsConversion/Incoming/OHFSIncoming/OHFSArchive/Tesla/carrier_combined/substantiate_claims",
+        "file_name_pattern": "Tesla",
+        "date_start_regx": "carrier_pivot_table_",
+        "date_length": 10,
+        "date_format": "%Y-%m-%d"
+    },
+    "app":{
+        "app_path": "C:/Users/nwebb19/python/Tesla_py"
+    }
+
+}
