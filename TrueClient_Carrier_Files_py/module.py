@@ -6,18 +6,46 @@ import json
 # Read file functions
 # ---------------------------
 
-def read_Tesla_Aetna(f):
+
+def read_TrueClient_RealMedCarrier(f):
 
     # reading data frame
     df = pd.read_csv(f, 
-            delimiter = '|',
+            delimiter = ',',
+            skiprows = 0, 
+            header = 0, 
+            dtype = str
+            )
+    return(df)
+
+def read_TrueClient_RCRS(f):
+
+    # reading data frame
+    df = pd.read_fwf(f, 
+            widths = [9,3,9,1,14,3,10,10,10,15,33,9,1,1,11,15,16,9,9,3,25,50,15,2,5,10,27],
             skiprows = 0, 
             header = None, 
             dtype = str
             )
     return(df)
 
-def read_Tesla_VSP(f):
+def read_TrueClient_Dentlife(f):
+
+    # reading data frame
+    df = pd.read_csv(f, 
+        delimiter = '|',
+        skiprows = 1, 
+        header = 0, 
+        dtype = str,
+        encoding= 'unicode_escape'
+        )
+
+    # removing the footer record
+    df = df.drop(df.index[-1])
+
+    return(df)
+
+def read_TrueClient_VisionSavings(f):
 
     # reading data frame
     df = pd.read_csv(f, 
@@ -31,7 +59,7 @@ def read_Tesla_VSP(f):
 
 # Map functions
 # ---------------------------
-def map_Tesla_Aetna(batch, output_header, employer_code): 
+def map_TrueClient_RealMedCarrier(batch, output_header, employer_code): 
     
     print('\n\nmapping file to standard format...')
 
@@ -40,32 +68,66 @@ def map_Tesla_Aetna(batch, output_header, employer_code):
     
 
     # Filling in DataFrame columns from the batch dataframe 
-    output_df['EMPLOYER_TAX_ID']            = batch[0]
-    output_df['PARTICIPANT_SSN']            = batch[6]
-    output_df['PARTICIPANT_LAST_NAME']      = batch[8]
-    output_df['PARTICIPANT_FIRST_NAME']     = batch[7]
-    output_df['PARTICIPANT_MIDDLE_INITIAL'] = ""
+    output_df['EMPLOYER_TAX_ID']            = ''
+    output_df['PARTICIPANT_SSN']            = batch['ParticipantSSN']
+    output_df['PARTICIPANT_LAST_NAME']      = batch['ParticipantLastName']
+    output_df['PARTICIPANT_FIRST_NAME']     = batch['ParticipantFirstName']
+    output_df['PARTICIPANT_MIDDLE_INITIAL'] = ''
+    output_df['PARTICIPANT_DATE_OF_BIRTH']  = batch['ParticipantDOB']
+    output_df['PATIENT_LAST_NAME']          = batch['PatientLastName']
+    output_df['PATIENT_FIRST_NAME']         = batch['PatientFirstName']
+    output_df['PATIENT_MIDDLE_INITIAL']     = ''
+    output_df['CARRIER_SYSTEM']             = 'RealCarrierSystem'
+    output_df['SERVICE_START_DATE']         = batch['ServiceStartDate']
+    output_df['SERVICE_THRU_DATE']          = batch['ServiceEndDate']
+    output_df['CLAIM_NUMBER']               = batch['ClaimID']
+
+    output_df['CLAIM_AMOUNT']               = pd.to_numeric(batch['ClaimAmount'])
+    
+    output_df['PROVIDER_NAME']              = batch['MedicalProvider']
+    output_df['PROVIDER_ADDRESS1']          = batch['ProviderAddress']
+    output_df['PROVIDER_ADDRESS2']          = ''
+    output_df['PROVIDER_CITY']              = batch['ProviderCity']
+    output_df['PROVIDER_STATE']             = batch['ProviderState']
+    output_df['PROVIDER_ZIP']               = batch['ProviderZipCode']
+    output_df['PROVIDER_COUNTRY']           = batch['ProviderCountry']
+    output_df['CLAIM_TYPE']                 = ""
+    output_df['FILE_NAME']                  = batch['FILE_NAME']
+    output_df['EXPENSE_CATEGORY']           = "Medical"
+    output_df['EMPLOYER_CODE']              = employer_code
+
+    return(output_df)
+
+def map_TrueClient_RCRS(batch, output_header, employer_code): 
+    
+    print('\n\nmapping file to standard format...')
+
+    # creating a data frame with specified output_header
+    output_df = pd.DataFrame(columns=output_header, dtype=str)
+    # output_df = output_df.astype(str)
+
+    # Filling in DataFrame columns from the batch dataframe 
+    output_df['EMPLOYER_TAX_ID']            = ""
+    output_df['PARTICIPANT_SSN']            = batch[0].str.zfill(9)
+    output_df['PARTICIPANT_LAST_NAME']      = batch[4]
+    output_df['PARTICIPANT_FIRST_NAME']     = batch[2]
+    output_df['PARTICIPANT_MIDDLE_INITIAL'] = batch[3]
     output_df['PARTICIPANT_DATE_OF_BIRTH']  = ""
-    output_df['PATIENT_LAST_NAME']          = batch[17]
-    output_df['PATIENT_FIRST_NAME']         = batch[16]
+    output_df['PATIENT_LAST_NAME']          = batch[15]
+    output_df['PATIENT_FIRST_NAME']         = batch[14]
     output_df['PATIENT_MIDDLE_INITIAL']     = ""
     output_df['CARRIER_SYSTEM']             = ""
-    output_df['SERVICE_START_DATE']         = batch[18]
-    output_df['SERVICE_THRU_DATE']          = batch[19]
-    output_df['CLAIM_NUMBER']               = batch[12]
-
-    # output_df['CLAIM_AMOUNT']               = pd.to_numeric([13])
-    # Not sure if this is correct, Tesla has many amounts in columns 27-39
-
-    output_df['CLAIM_AMOUNT']               = pd.to_numeric(batch[27])
-    
-    output_df['PROVIDER_NAME']              = batch[47]
-    output_df['PROVIDER_ADDRESS1']          = batch[48]
-    output_df['PROVIDER_ADDRESS2']          = batch[49]
-    output_df['PROVIDER_CITY']              = batch[50]
-    output_df['PROVIDER_STATE']             = batch[51]
-    output_df['PROVIDER_ZIP']               = batch[19]
-    output_df['PROVIDER_COUNTRY']           = batch[20]
+    output_df['SERVICE_START_DATE']         = batch[6]
+    output_df['SERVICE_THRU_DATE']          = batch[7]
+    output_df['CLAIM_NUMBER']               = batch[11]
+    output_df['CLAIM_AMOUNT']               = pd.to_numeric(batch[9])
+    output_df['PROVIDER_NAME']              = batch[20]
+    output_df['PROVIDER_ADDRESS1']          = batch[21]
+    output_df['PROVIDER_ADDRESS2']          = ""
+    output_df['PROVIDER_CITY']              = batch[22]
+    output_df['PROVIDER_STATE']             = batch[23]
+    output_df['PROVIDER_ZIP']               = batch[24]
+    output_df['PROVIDER_COUNTRY']           = ""
     output_df['CLAIM_TYPE']                 = ""
     output_df['FILE_NAME']                  = batch['FILE_NAME']
     output_df['EXPENSE_CATEGORY']           = "medical"
@@ -73,7 +135,47 @@ def map_Tesla_Aetna(batch, output_header, employer_code):
 
     return(output_df)
 
-def map_Tesla_VSP(batch, output_header, employer_code): 
+def map_TrueClient_Dentlife(batch, output_header, employer_code): 
+    
+    print('\n\nmapping file to standard format...')
+
+    # creating a data frame with specified output_header
+    output_df = pd.DataFrame(columns=output_header, dtype=str)
+    # output_df = output_df.astype(str)
+
+    # Filling in DataFrame columns from the batch dataframe 
+    output_df['EMPLOYER_TAX_ID']            = batch['EMPLOYER_TAX_ID']
+    output_df['PARTICIPANT_SSN']            = batch['PARTICIPANT_SSN']
+    output_df['PARTICIPANT_LAST_NAME']      = batch['PARTICIPANT_LAST_NAME']
+    output_df['PARTICIPANT_FIRST_NAME']     = batch['PARTICIPANT_FIRST_NAME']
+    output_df['PARTICIPANT_MIDDLE_INITIAL'] = batch['PARTICIPANT_MIDDLE_INITIAL']
+    output_df['PARTICIPANT_DATE_OF_BIRTH']  = batch['PARTICIPANT_DATE_OF_BIRTH']
+    output_df['PATIENT_LAST_NAME']          = batch['PATIENT_LAST_NAME']
+    output_df['PATIENT_FIRST_NAME']         = batch['PATIENT_FIRST_NAME']
+    output_df['PATIENT_MIDDLE_INITIAL']     = batch['PATIENT_MIDDLE_INITIAL']
+    output_df['CARRIER_SYSTEM']             = batch['CARRIER_SYSTEM']
+    output_df['SERVICE_START_DATE']         = batch['SERVICE_START_DATE']
+    output_df['SERVICE_THRU_DATE']          = batch['SERVICE_THRU_DATE']
+    output_df['CLAIM_NUMBER']               = batch['CLAIM_NUMBER']
+
+    output_df['CLAIM_AMOUNT']               = pd.to_numeric(batch['CLAIM_AMOUNT'].str[:-1])  # removing the last character ('{' or 'B')
+    output_df['CLAIM_AMOUNT']               = output_df['CLAIM_AMOUNT'] / 100                    # dividing by 100 
+
+    output_df['PROVIDER_NAME']              = batch['PROVIDER_NAME']
+    output_df['PROVIDER_ADDRESS1']          = batch['PROVIDER_ADDRESS1']
+    output_df['PROVIDER_ADDRESS2']          = batch['PROVIDER_ADDRESS2']
+    output_df['PROVIDER_CITY']              = batch['PROVIDER_CITY']
+    output_df['PROVIDER_STATE']             = batch['PROVIDER_STATE']
+    output_df['PROVIDER_ZIP']               = batch['PROVIDER_ZIP']
+    output_df['PROVIDER_COUNTRY']           = batch['PROVIDER_COUNTRY']
+    output_df['CLAIM_TYPE']                 = ""  
+    output_df['FILE_NAME']                  = batch['FILE_NAME']
+    output_df['EXPENSE_CATEGORY']           = "dental"
+    output_df['EMPLOYER_CODE']              = employer_code
+
+    return(output_df)
+
+def map_TrueClient_VisionSavings(batch, output_header, employer_code): 
     
     print('\n\nmapping file to standard format...')
     
@@ -116,13 +218,17 @@ def map_Tesla_VSP(batch, output_header, employer_code):
 # The carrier names must be the same as the config.json file
 # ---------------------------
 read = {
-    'Aetna': read_Tesla_Aetna,
-    'VSP': read_Tesla_VSP, 
+    'RealMedCarrier': read_TrueClient_RealMedCarrier,
+    'RCRS': read_TrueClient_RCRS,
+    'Dentlife': read_TrueClient_Dentlife, 
+    'VisionSavings': read_TrueClient_VisionSavings, 
 }
 
 map = {
-    'Aetna': map_Tesla_Aetna,
-    'VSP': map_Tesla_VSP, 
+    'RealMedCarrier': map_TrueClient_RealMedCarrier,
+    'RCRS': map_TrueClient_RCRS,
+    'Dentlife': map_TrueClient_Dentlife, 
+    'VisionSavings': map_TrueClient_VisionSavings, 
 }
 
 
@@ -130,7 +236,12 @@ map = {
 
 
 
-# --- EDIT ABOVE ONLY -------
+# --- EDIT ABOVE ONLY --- 
+
+
+
+
+
 
 
 # List files function
@@ -178,7 +289,7 @@ def concat_carrier(carrier, file_input_path, file_name_pattern, date_start_regx,
     # listing files
     file_list_df = list_files_date_regx(file_input_path, file_name_pattern, date_start_regx, date_length)
     file_list_df['file_dates'] = pd.to_datetime(file_list_df['file_dates'], format = date_format)     # converting dates 
-    file_list_df = file_list_df.sort_values(by='file_dates', ascending=False)                      # sorting 
+    file_list_df = file_list_df.sort_values(by='file_dates', ascending=True)                      # sorting 
 
     # creating empty dataframe 
     batch = pd.DataFrame()
@@ -237,19 +348,13 @@ def concat_and_map(carrier):
     # calling function from the map dictionary and saving the output dataframe
     output_df = map[carrier](batch, output_header, employer_code)
 
-    # checking to see if the output_path exists. If not, create the directory
-    if not os.path.exists(output_path): 
-        print(f"\n\nThe output path does not exist, creating the directory...\n {output_path}")
-        os.makedirs(output_path)
-
-    # assigning a name to the output file
+    # writing a csv file to output path
     file_name = employer_code + '_' + carrier + '_mapped_' + files_start_dt + '_to_' + files_end_dt + '.csv'
     file_output_path = output_path + '/' + file_name
 
     print(f'\n\nwriting file [{file_name}] to directory: ')
     print(f'[{output_path}]...')
 
-    # writing a csv file to output path
     output_df.to_csv(file_output_path, index = False)
     print('\n\nDone!')
 
@@ -301,102 +406,4 @@ def batch_carrier_files():
 
     print(f"\nfiles batched!")
     return(batch)
-
-
-# creating pivot tables
-# ---------------------------
-def categorize_expenses(df):
-    df['EXPENSE_CATEGORY'] = df['expense_type'].apply(lambda x: 
-        'Vision' if x in ["Optometrists, Ophthalmologists", 
-                          "Opticians, Optical Goods, and Eyeglasses", 
-                          "Other Vision"] else 
-        'Pharmacy' if x in ["Drug Stores and Pharmacies", 
-                                 "Drugs - Prescription Medication", 
-                                 "Other Drugs & Medicine"] 
-                                 or "Drug Proprietaries" in x else 
-        'Medical' if x in ["Ambulance Services", 
-                                "Chiropodists, Podiatrists", 
-                                "Chiropractors", 
-                                "Doctors not elsewhere classified", 
-                                "Government Services not elsewhere classified", 
-                                "Hearing Aid - Sales, Service, Supply Stores", 
-                                "Hospitals", 
-                                "Laboratory/Medical/Dental/Ophthalmic Hospital Equipment and Supplies", 
-                                "Medical and Dental Laboratories", 
-                                "Medical Services and Health Practitioners not elsewhere classified", 
-                                "Nursing and Personal Care Facilities", 
-                                "Orthopedic Goods, Prosthetic Devices", 
-                                "Osteopathic Physicians", 
-                                "Other Medical"] else 
-        'Dental' if x in ["Dentists, Orthodontists", 
-                               "Other Dental",
-                               "Dental"] else 
-        None)
-    
-    return df
-
-def pivot_carrier_files(): 
-    print('Creating carrier pivot table...\n')
-    # batching carrier files
-    batch = batch_carrier_files()
-
-    # converting to numeric
-    batch['CLAIM_AMOUNT'] = pd.to_numeric(batch['CLAIM_AMOUNT'])
-
-    # creating the pivot table 
-    carrier_pivot = pd.pivot_table(batch, 
-                                   values = 'CLAIM_AMOUNT', 
-                                   columns = 'EXPENSE_CATEGORY', 
-                                   index='PARTICIPANT_SSN', 
-                                   aggfunc='sum', 
-                                   fill_value=0) 
-    
-    print('Pivot table created!\n')
-    return(carrier_pivot)
-
-def pivot_wex_report(report_type):
-    # open and read config.json file
-    with open('config.json', 'r') as config_file: 
-        config = json.load(config_file)
-
-    # storing variables from config.json file 
-    file_input_path           = config['output']['substantiate']['file_input_path']
-    date_length               = config['output']['substantiate']['date_length']
-    date_format               = config['output']['substantiate']['date_format']
-    file_name_pattern         = config['output']['substantiate'][report_type]['file_name_pattern']
-    date_start_regx           = config['output']['substantiate'][report_type]['date_start_regx']
-
-
-    # listing files
-    file_list_df = list_files_date_regx(file_input_path, file_name_pattern, date_start_regx, date_length)
-    file_list_df['file_dates'] = pd.to_datetime(file_list_df['file_dates'], format = date_format)     # converting dates
-    file_list_df = file_list_df.sort_values(by='file_dates', ascending=False)                      # sorting 
-
-    # getting recent file
-    recent_file = file_list_df['file_list'][0]
-    print(f'The most recent file is: {os.path.basename(recent_file)}...\n')
-    wex_df = pd.read_excel(recent_file)
-
-    # renaming the "ssn" to "SSN" so it matches the carrier files
-    wex_df.rename(columns={"ssn": "PARTICIPANT_SSN"}, inplace=True)
-
-    # converting data types
-    wex_df['expense_type'] = wex_df['expense_type'].astype(str)
-    wex_df['claim_amount'] = wex_df['claim_amount'].astype(float)
-    wex_df['PARTICIPANT_SSN'] = wex_df['PARTICIPANT_SSN'].astype(str)
-    wex_df['PARTICIPANT_SSN'] = wex_df['PARTICIPANT_SSN'].str.zfill(9)
-
-    # categorizing expenses by the expense type column
-    wex_df = categorize_expenses(wex_df)
-
-    # creating the pivot table 
-    wex_pivot = pd.pivot_table(wex_df, 
-                                   values = 'claim_amount', 
-                                   columns = 'EXPENSE_CATEGORY', 
-                                   index='PARTICIPANT_SSN', 
-                                   aggfunc='sum', 
-                                   fill_value=0) 
-
-    print('Pivot table created!\n')
-    return(wex_pivot)
 
