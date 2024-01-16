@@ -3,8 +3,17 @@ import os
 import json
 from module import *
 
+# ---- EDIT THESE LINES ----------
+# enter your project location here: 
+
+project_location = '/Users/test'
+
+# ------------------------------
+
 # setting app working directoy
-os.chdir("/Users/noahwebb/Python/Carrier_File_Pipeline/TrueClient_Carrier_Files_py")
+code_path = 'Carrier_File_Pipeline/TrueClient_Carrier_Files_py'
+path = os.path.join(project_location, code_path)
+os.chdir(path)
 
 carrier1 = 'RealMedCarrier'
 carrier2 = 'RCRS'
