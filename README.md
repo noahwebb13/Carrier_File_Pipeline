@@ -1,4 +1,4 @@
-# Carrier_File_Pipeline
+# Insurance Carrier ETL Pipeline
 I created this project to map files sent from health insurance carriers into a standard format. Because health insurance companies use proprietary file formats and naming conventions, it was important to create the code simple and scalable. 
 
 Here is the process: 
