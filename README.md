@@ -20,6 +20,9 @@ Let's say carriers send their files into this directory:
 
 Notice that each file has it's own naming convention. Although each file name contains a date, the dates are in different formats. 
 
+---
+
+
 Lets open the RCRS file (Real Carrier Real Service - aka fake carrier): 
 
 ![alt text](images/RCRS.png)
