@@ -30,10 +30,20 @@ Lets open the RCRS file (Real Carrier Real Service - aka fake carrier):
 
 ![alt text](images/RCRS.png)
 
-The file is in a fixed width format and does not contain columne names. 
+The file is in a fixed width format and does not contain column names. 
+
+
+---
+Here is the file for Vision Savings: 
+
 ![alt text](images/Vision_Savings.png)
+
+Hre is the file for Dentlife: 
+
 ![alt text](images/Dentlife.png)
 
+
+---
 ![alt text](images/RCRS_mapped.png)
 ![alt text](images/Vision_Savings_mapped.png)
 ![alt text](images/Dentlife_mapped.png)
