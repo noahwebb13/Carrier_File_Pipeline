@@ -26,9 +26,11 @@ In practice, clients send files through an SFTP and a scheduled job will run thi
 ![alt text](images/Dentlife_mapped.png)
 
 
-## module.py file
 
+## Python project directory
 ![alt text](images/py_folder.png)
+
+## module.py file
 
 ![alt text](images/module_1.png)
 ![alt text](images/module_2.png)
