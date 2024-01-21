@@ -26,7 +26,7 @@ Notice that each file has it's own naming convention. Although each file name co
 ---
 
 
-Lets open the **RCRS** file "medclms.TrueClient_RCRS.01062023": 
+Lets open the **RCRS** file "medclms.TrueClient_RCRS.01062023.txt": 
 
 (*note: RCRS stands for "Real Carrier Real Service" - aka fake insurance carrier*)
 
@@ -37,12 +37,18 @@ This is a fixed-width file and does not contain column names. In this example, w
 
 
 ---
-Here is the file for **Vision Savings**: 
+Here is the file for **Vision Savings** "VisionSavings_FSA_TrueClient_20230127.txt": 
+- comma-delimited
+- no column names
+- saved in quotations
 
 ![alt text](images/Vision_Savings.png)
 
-And here is the file for **Dentlife**: 
-
+And here is the file for **Dentlife** "TrueClient_dentlife_01182023.txt": 
+- pipe-delimited
+- has column names
+- header and footer data
+  
 ![alt text](images/Dentlife.png)
 
 
