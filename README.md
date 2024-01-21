@@ -10,6 +10,7 @@ Here are the high-level steps in this code:
 
 
 *Additional Info:*
+
 *In practice, carriers send files through an SFTP and a scheduled job will run this code. Then, the output file is appended to a database table. Futhermore, there are separate jobs that focus on moving files to their correct location - such as a processing folder or archive folder.* 
 
 
