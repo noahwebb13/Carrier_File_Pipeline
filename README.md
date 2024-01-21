@@ -15,11 +15,13 @@ In practice, carriers send files through an SFTP and a scheduled job will run th
 
 ## Carrier files
 Let's say carriers send their files into this directory: 
+
 ![alt text](images/carrier_files.png)
 
 Notice that each file has it's own naming convention. Although each file name contains a date, the dates are in different formats. 
 
 Lets open the RCRS file (Real Carrier Real Service - aka fake carrier): 
+
 ![alt text](images/RCRS.png)
 
 The file is in a fixed width format and does not contain columne names. 
