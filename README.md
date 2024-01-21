@@ -1,5 +1,5 @@
 # Overview of the code: 
-Insurance carriers send claims for their members through a file, usually on a scheduled basis such as daily, weekly, or monthly. However, each insurance carrier uses a proprietary file format. And to import the data into a database, these files need to be standardized. 
+Insurance carriers send participant claims on behalf of a client through a file, usually on a scheduled basis such as daily, weekly, or monthly. However, each insurance carrier uses a proprietary file format. And to import the data into a database, these files need to be standardized. 
 
 Here are the high-level steps in this code: 
 1) files are dropped into a directory
