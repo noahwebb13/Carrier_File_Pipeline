@@ -30,7 +30,8 @@ Lets open the RCRS file (Real Carrier Real Service - aka fake carrier):
 
 ![alt text](images/RCRS.png)
 
-The file is in a fixed width format and does not contain column names. 
+The file is in a fixed width format and does not contain column names. In this example, we'll assume the client has already defined the data for us. We know the participant SSN, name, service dates, and claim amount are shown in this screenshot. 
+
 
 
 ---
