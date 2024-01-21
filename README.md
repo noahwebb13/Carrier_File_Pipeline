@@ -14,4 +14,4 @@ In practice, clients send files through an SFTP and a scheduled job will run thi
 
 
 ## Carrier files
-![alt text](carrier_files.png)
+![alt text](images/carrier_files.png)
