@@ -26,7 +26,7 @@ Notice that each file has it's own naming convention. Although each file name co
 ---
 
 
-Lets open the RCRS file "medclms.TrueClient_RCRS.01062023": 
+Lets open the **RCRS** file "medclms.TrueClient_RCRS.01062023": 
 
 (*note: RCRS stands for "Real Carrier Real Service" - aka fake insurance carrier*)
 
@@ -37,11 +37,11 @@ This is a fixed-width file and does not contain column names. In this example, w
 
 
 ---
-Here is the file for Vision Savings: 
+Here is the file for **Vision Savings**: 
 
 ![alt text](images/Vision_Savings.png)
 
-And here is the file for Dentlife: 
+And here is the file for **Dentlife**: 
 
 ![alt text](images/Dentlife.png)
 
