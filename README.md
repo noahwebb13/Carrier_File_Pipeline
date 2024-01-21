@@ -28,7 +28,6 @@ Notice that each file has it's own naming convention. Although each file name co
 
 Lets open the **RCRS** file "medclms.TrueClient_RCRS.01062023.txt": 
 
-(*note: RCRS stands for "Real Carrier Real Service" - aka fake insurance carrier*)
 
 ![alt text](images/RCRS.png)
 
