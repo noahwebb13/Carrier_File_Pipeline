@@ -14,4 +14,22 @@ In practice, clients send files through an SFTP and a scheduled job will run thi
 
 
 ## Carrier files
+
+
+
+
 ![alt text](images/carrier_files.png)
+![alt text](images/RCRS.png)
+![alt text](images/Vision_Savings.png)
+![alt text](images/Dentlife.png)
+![alt text](images/RCRS_mapped.png)
+![alt text](images/Vision_Savings_mapped.png)
+![alt text](images/Dentlife_mapped.png)
+![alt text](images/module_1.png)
+![alt text](images/module_read.png)
+![alt text](images/module_map.png)
+![alt text](images/module_dict.png)
+![alt text](images/module_2.png)
+![alt text](images/config_1.png)
+![alt text](images/config_RCRS.png)
+![alt text](images/py_folder.png)
