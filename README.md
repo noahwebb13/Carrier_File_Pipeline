@@ -99,11 +99,13 @@ The module file contains the functions that run the ETL process. Many of these f
 ![alt text](images/module_2.png)
 
 Here is the read function for the **RCRS** files:
+
 ![alt text](images/module_read.png)
 
 --- 
 
 Here is the map function for the **RCRS** files. Here is where the columns from the raw data are converted to the standard format. Data such as the SSN, claim amount, and service dates can be manipulated into a uniform structure. 
+
 ![alt text](images/module_map.png)
 
 
