@@ -33,6 +33,9 @@ Lets open the **RCRS** file "medclms.TrueClient_RCRS.01062023.txt":
 
 This is a fixed-width file and does not contain column names. In this example, we'll assume the client has already defined the data for us. We know the participant SSN, name, service dates, and claim amount are shown in this screenshot. 
 
+In Summary: 
+ - fixed-width
+ - no column names
 
 
 ---
