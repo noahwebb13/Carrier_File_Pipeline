@@ -92,11 +92,18 @@ The `Output` object provides details such as the employer code (client code), ou
 
 
 ### module.py file
+The module file contains the functions that run the ETL process. Many of these functions are repeated accross clients. However, the `read_client` functions, `map_client` functions, and the module dictionary needs to be updated. 
 
 ![alt text](images/module_1.png)
 ![alt text](images/module_2.png)
 
+Here is the read function for the **RCRS** files:
 ![alt text](images/module_read.png)
+
+--- 
+
+
+
 ![alt text](images/module_map.png)
 ![alt text](images/module_dict.png)
 
