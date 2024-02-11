@@ -59,7 +59,7 @@ And here is the file for **Dentlife** `TrueClient_dentlife_01182023.txt`:
 
 ---
 
-After the process runs, the files are standardized. This makes the data much easier to compare.
+After the process runs, the files are batched together standardized. This makes the data much easier to compare.
 
 **RCRS**: 
 ![alt text](images/RCRS_mapped.png)
@@ -74,9 +74,25 @@ After the process runs, the files are standardized. This makes the data much eas
 
 ## So how did we get here? 
 ### Python project directory
-Let's open the python project directory. `modeule.py` and 'config.json` are the important files to note. 
+Let's open the python project directory. `config.json` and `modeule.py` are the important files to note. 
 
 ![alt text](images/py_folder.png)
+
+---
+### config.json file
+
+Here is the config.json file. Important details of the files are stored here such as the file name pattern, storage location, file name date start location, file name date length, and file name date format. 
+
+*Additional Info:*
+
+*Often, clients will include optional text within the file name. Some files received will include this info and some will not. Because of this, the code uses regular expression to get the index position of the file date.*
+
+![alt text](images/config_1.png)
+
+Here's a closer look at the **RCRS** file: 
+
+![alt text](images/config_RCRS.png)
+
 
 ### module.py file
 
@@ -87,8 +103,4 @@ Let's open the python project directory. `modeule.py` and 'config.json` are the 
 ![alt text](images/module_map.png)
 ![alt text](images/module_dict.png)
 
-### config.json file
-
-![alt text](images/config_1.png)
-![alt text](images/config_RCRS.png)
 
