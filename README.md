@@ -16,7 +16,7 @@ Here are the high-level steps in this code:
 
 
 
-## Carrier files
+### Carrier files
 Let's say carriers send their files into this directory: 
 
 ![alt text](images/carrier_files.png)
@@ -26,7 +26,7 @@ Notice that each file has it's own naming convention. Although each file name co
 ---
 
 
-Lets open the **RCRS** file "medclms.TrueClient_RCRS.01062023.txt": 
+Lets open the **RCRS** file `medclms.TrueClient_RCRS.01062023.txt`: 
 
 
 ![alt text](images/RCRS.png)
@@ -39,7 +39,7 @@ In Summary:
 
 
 ---
-Here is the file for **Vision Savings** "VisionSavings_FSA_TrueClient_20230127.txt": 
+Here is the file for **Vision Savings** `VisionSavings_FSA_TrueClient_20230127.txt`: 
 
 ![alt text](images/Vision_Savings.png)
 
@@ -48,7 +48,7 @@ Here is the file for **Vision Savings** "VisionSavings_FSA_TrueClient_20230127.t
 - saved in quotations
 
 ---
-And here is the file for **Dentlife** "TrueClient_dentlife_01182023.txt": 
+And here is the file for **Dentlife** `TrueClient_dentlife_01182023.txt`: 
 
 ![alt text](images/Dentlife.png)
 - pipe-delimited
@@ -70,12 +70,15 @@ After the process runs, the files are standardized. This makes the data much eas
 **Dentlife**:
 ![alt text](images/Dentlife_mapped.png)
 
+---
 
+## So how did we get here? 
+### Python project directory
+Let's open the python project directory. `modeule.py` and 'config.json` are the important files to note. 
 
-## Python project directory
 ![alt text](images/py_folder.png)
 
-## module.py file
+### module.py file
 
 ![alt text](images/module_1.png)
 ![alt text](images/module_2.png)
@@ -84,7 +87,7 @@ After the process runs, the files are standardized. This makes the data much eas
 ![alt text](images/module_map.png)
 ![alt text](images/module_dict.png)
 
-## config.json file
+### config.json file
 
 ![alt text](images/config_1.png)
 ![alt text](images/config_RCRS.png)
