@@ -40,19 +40,20 @@ In Summary:
 
 ---
 Here is the file for **Vision Savings** "VisionSavings_FSA_TrueClient_20230127.txt": 
+
+![alt text](images/Vision_Savings.png)
+
 - comma-delimited
 - no column names
 - saved in quotations
 
-![alt text](images/Vision_Savings.png)
-
+---
 And here is the file for **Dentlife** "TrueClient_dentlife_01182023.txt": 
+
+![alt text](images/Dentlife.png)
 - pipe-delimited
 - has column names
 - header and footer data
-  
-![alt text](images/Dentlife.png)
-
 
 
 
