@@ -58,6 +58,9 @@ And here is the file for **Dentlife** "TrueClient_dentlife_01182023.txt":
 
 
 ---
+
+After the process runs, the files are standardized. This makes the data much easier to compare.
+
 ![alt text](images/RCRS_mapped.png)
 ![alt text](images/Vision_Savings_mapped.png)
 ![alt text](images/Dentlife_mapped.png)
