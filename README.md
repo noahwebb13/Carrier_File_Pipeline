@@ -81,7 +81,7 @@ Let's open the python project directory. `config.json` and `module.py` are the i
 ---
 ### config.json file
 
-Here is the config.json file. Important details of the files are stored here such as the file name pattern, storage location, file name date start location, file name date length, and file name date format. 
+Important details of the files are stored here such as the file name pattern, storage location, file name date start location, file name date length, and file name date format. 
 
 *Additional Info:*
 
