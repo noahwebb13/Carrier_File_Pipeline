@@ -95,6 +95,7 @@ The `Output` object provides details such as the employer code (client code), ou
 The module file contains the functions that run the ETL process. Many of these functions are repeated accross clients. However, the `read_client` functions, `map_client` functions, and the module dictionary needs to be updated. 
 
 ![alt text](images/module_1.png)
+![alt text](images/module_dict.png)
 ![alt text](images/module_2.png)
 
 Here is the read function for the **RCRS** files:
@@ -102,9 +103,8 @@ Here is the read function for the **RCRS** files:
 
 --- 
 
-
-
+Here is the map function for the **RCRS** files. Here is where the columns from the raw data are converted to the standard format. Data such as the SSN, claim amount, and service dates can be manipulated into a uniform structure. 
 ![alt text](images/module_map.png)
-![alt text](images/module_dict.png)
+
 
 
