@@ -83,15 +83,12 @@ Let's open the python project directory. `config.json` and `module.py` are the i
 
 Important details of the files are stored here such as the file input path, file name pattern, file name date start location, file name date length, and file name date format. 
 
-*Additional Info:*
+The `Output` object provides details such as the employer code (client code), output file path for the mapped files, and the header data of the output file. 
 
+*Additional Info:*
 *Often, clients will include optional text within the file name. Some files received will include this info and some will not. Because of this, the code uses regular expression to get the index position of the file date. See `RealMedCarrier` below for an example.*
 
 ![alt text](images/config_1.png)
-
-Here's a closer look at the **RCRS** file: 
-
-![alt text](images/config_RCRS.png)
 
 
 ### module.py file
