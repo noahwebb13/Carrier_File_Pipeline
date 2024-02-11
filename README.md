@@ -104,7 +104,7 @@ Here is the read function for the **RCRS** files:
 
 --- 
 
-Here is the map function for the **RCRS** files. Here is where the columns from the raw data are converted to the standard format. Data such as the SSN, claim amount, and service dates can be manipulated into a uniform structure. 
+Here is the map function for the **RCRS** files. Here is where the columns from the raw data are converted to the standard format. Data such as the SSN, claim amount, and dates can be manipulated into a uniform structure. 
 
 ![alt text](images/module_map.png)
 
