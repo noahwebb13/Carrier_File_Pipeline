@@ -85,7 +85,7 @@ Important details of the files are stored here such as the file input path, file
 
 *Additional Info:*
 
-*Often, clients will include optional text within the file name. Some files received will include this info and some will not. Because of this, the code uses regular expression to get the index position of the file date.*
+*Often, clients will include optional text within the file name. Some files received will include this info and some will not. Because of this, the code uses regular expression to get the index position of the file date. See `RealMedCarrier` below for an example.*
 
 ![alt text](images/config_1.png)
 
