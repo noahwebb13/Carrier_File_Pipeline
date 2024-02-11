@@ -74,7 +74,7 @@ After the process runs, the files are batched together standardized. This makes 
 
 ## So how did we get here? 
 ### Python project directory
-Let's open the python project directory. `config.json` and `modeule.py` are the important files to note. 
+Let's open the python project directory. `config.json` and `module.py` are the important files to note. 
 
 ![alt text](images/py_folder.png)
 
