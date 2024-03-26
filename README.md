@@ -92,7 +92,7 @@ The `Output` object provides details such as the employer code (client code), ou
 
 
 ### module.py file
-The module file contains the functions that run the ETL process. Many of these functions are repeated accross clients. However, the `read_client` functions, `map_client` functions, and the module dictionary needs to be updated. 
+The module file contains the functions that run the ETL process. Many of these functions are repeated accross clients. However, the `read_client` functions, `map_client` functions, and the module dictionary needs to be adjusted for each client. 
 
 ![alt text](images/module_1.png)
 ![alt text](images/module_dict.png)
